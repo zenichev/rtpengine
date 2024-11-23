@@ -1003,7 +1003,7 @@ static int redis_check_conn(struct redis *r) {
 	// redis is connected
 	if (r->state == REDIS_STATE_DISCONNECTED) {
 		rlog(LOG_INFO, "RE-Established connection to Redis '%s'",
-			r->hostname);
+			r->host);
 		r->state = REDIS_STATE_CONNECTED;
 	}
 
